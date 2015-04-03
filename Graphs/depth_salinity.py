@@ -12,15 +12,15 @@ salinity= df1.sal
 oxygen=df1.oxy
 chloropig=df1.fluor
 TOOLS="resize,hover, save, crosshair,pan,wheel_zoom,box_zoom,reset,tap,previewsave,box_select,poly_select,lasso_select"
-output_file("depth_vs_temperature.html", title="depth_vs_temperature")
-p = figure(tools=TOOLS,title = 'HOTS C#1 Depth vs Temperature', x_axis_label="Depth",y_axis_label = "Temperature")
-p.scatter(depth,temp, radius=3, fill_color="#FF0040", fill_alpha=0.6, line_color=None)
+output_file("HOTS_depth_vs_salinity.html", title="HOTS_depth_vs_salinity")
+p = figure(tools=TOOLS,title = 'HOTS C#1 Depth vs Salinity', x_axis_label="Depth",y_axis_label = "Salinity")
+p.scatter(temp,salinity, radius=0.2, fill_color="#FA5858", fill_alpha=0.6, line_color=None)
 p.xaxis.axis_label = "Depth (m)"
-p.yaxis.axis_label = "Temperature (Celcius)"
+p.yaxis.axis_label = "Salinity (Celcius)"
 source = ColumnDataSource(
     data=dict(
-        x=depth,
-        y=temp,
+        x=temp,
+        y=salinity,
       
     )
 )
@@ -30,6 +30,6 @@ p.plot_height = 600
 hover = p.select(dict(type=HoverTool))
 hover.tooltips = OrderedDict([
     ('Depth', '@x'),
-    ('Temperature', '@y'),
+    ('Salinity', '@y'),('Temperature', '@temp')
 ])
 show(p)  # open a browser
