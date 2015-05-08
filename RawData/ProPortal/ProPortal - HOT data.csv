@@ -1,8 +1,8 @@
-Strain  ,Alternative names  ,Location  ,Info  ,Size  ,GC Content  ,Num Contigs  ,Status  ,NCBI Taxonomy ID  
-MIT0601,N/A,"HOT, 125","Ecotype: ""LLII,III"" ",1770570,37,34,complete,80000205
-MIT0602,N/A,"HOT, 125","Ecotype: ""LLII,III"" ",1754272,36.3,12,complete,80000206
-MIT0603,N/A,"HOT, 125",Ecotype: LLIV ,1769891,36.3,13,complete,80000207
-MIT0604,N/A,"HOT, 175",Ecotype: HLII ,1780061,31.2,1,complete,80000208
-MIT0902,N/A,"HOT, 175",Ecotype: LLI ,1861070,35.1,1,in progress,80000209
-MIT0903,N/A,"HOT, 200",Ecotype: LLI ,1927646,34.7,1,in progress,80000210
-PAC1,N/A,"HOT, 100",Ecotype: LLI ,1859847,35.2,25,in progress,80000231
+Strain  ,Location  ,Info  ,Size  ,GC Content  ,Num Contigs  ,Status  ,NCBI Taxonomy ID  
+MIT0601,"HOT, 125","Ecotype: ""LLII,III"" ",1770570,37,34,complete,80000205
+MIT0602,"HOT, 125","Ecotype: ""LLII,III"" ",1754272,36.3,12,complete,80000206
+MIT0603,"HOT, 125",Ecotype: LLIV ,1769891,36.3,13,complete,80000207
+MIT0604,"HOT, 175",Ecotype: HLII ,1780061,31.2,1,complete,80000208
+MIT0902,"HOT, 175",Ecotype: LLI ,1861070,35.1,1,in progress,80000209
+MIT0903,"HOT, 200",Ecotype: LLI ,1927646,34.7,1,in progress,80000210
+PAC1,"HOT, 100",Ecotype: LLI ,1859847,35.2,25,in progress,80000231
