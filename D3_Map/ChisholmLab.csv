@@ -1,0 +1,35 @@
+name,PLACE OF ORIGIN,lat,lon,DEPTH,ISOLATOR,ISOLATED,METHOD,url
+SS120,Sargasso Sea,28.983,-64.35,120 m,B. Palenik,1988.4032258065,filtered,http://google.com
+SS35,Sargasso Sea,28.983,-64.35,120 m,B. Palenik,1988.4032258065,filtered,http://google.com
+SS51,Sargasso Sea,28.983,-64.35,120 m,B. Palenik,1988.4032258065,filtered,http://google.com
+SS52,Sargasso Sea,28.983,-64.35,120 m,B. Palenik,1988.4032258065,filtered,http://google.com
+SS2,Sargasso Sea,28.983,-64.35,120 m,B. Palenik,1988.4032258065,filtered,http://google.com
+MIT9301,Sargasso Sea,34.16666,-66.3033, 90 m,L. R. Moore,1993.188172043,filtered,http://google.com
+MIT9302,Sargasso Sea,34.755,-66.185,100 m,L. R. Moore,1993.2822580645,sorted on fcm,http://google.com
+MIT9303,Sargasso Sea,34.755,-66.185,100 m,L. R. Moore,1993.2822580645,sorted on fcm,http://google.com
+MIT9401,Sargasso Sea,35.5,-70.4,surface,"""",1994-05-01*,filtered,http://google.com
+MIT9311,Gulf Stream,37.5133,-68.24,135 m,L. R. Moore,1993.3198924731,sorted on fcm,http://google.com
+MIT9312,Gulf Stream,37.5133,-68.24,135 m,L. R. Moore,1993.3198924731,sorted on fcm,http://google.com
+MIT9313,Gulf Stream,37.5133,-68.24,135 m,L. R. Moore,1993.3198924731,sorted on fcm,http://google.com
+MIT9314,Gulf Stream,37.5133,-68.24,180 m,L. R. Moore,1993.3198924731,filtered,http://google.com
+NATL1A,North Atlantic,37.4,-40, 30 m,F. Partensky,1990-04-01*,filtered,http://google.com
+NATL2A,North Atlantic,39,-49.3,10 m,Scanlan,1990-04-01*,filtered,http://google.com
+NATL2A Ax,North Atlantic,39,-49.3,10 m, ,2008*,sorted axenic,http://google.com
+MED,Mediterranean Sea,43.2,6.4166,  5 m,Vaulot & Partensky,1989-01-01*,filtered,http://google.com
+MED1,Mediterranean Sea,43.2,6.4166,  5 m, , *,cloned,http://google.com
+MED4,Mediterranean Sea,43.2,6.4166,  5 m,Vaulot & Partensky,1989-01-01*,filtered,http://google.com
+MED4Ax,Mediterranean Sea,43.2,6.4166,  5 m,Saito,1989-01-01*,cloned/plated axenic,http://google.com
+MIT9107,Tropical Pacific,-15,-135, 25 m,J. Dusenberry,1991.1720430108,filtered,http://google.com
+MIT9116,Tropical Pacific,-15,-135, 25 m,J. Dusenberry,1991.1720430108,filtered,http://google.com
+MIT9123,Tropical Pacific,-15,-135, 25 m,J. Dusenberry,1991.1720430108,filtered,http://google.com
+MIT9201,Tropical Pacific,-12,-145.4166,surface,B. Binder,1992.6290322581,filtered,http://google.com
+MIT9202,Tropical Pacific,-12,-145.4166,79 m,B. Binder,1992.6290322581,filtered,http://google.com
+MIT9211,Equatorial Pacific,0,-140,1% Io,R. Olson,1992.0430107527,filtered,http://google.com
+MIT9215,Equatorial Pacific,0,-140,surface,B. Binder,1992.0806451613,filtered,http://google.com
+MIT9321,Equatorial Pacific,1,-92, 50 m,P. Chisholm,1993.3548387097,filtered,http://google.com
+MIT9322,Equatorial Pacific,0.266666,-93,surface,P. Chisholm,1993.4731182796,filtered,http://google.com
+MIT9515,Tropical Pacific,-5.7,-107.1,15m,P. Chisholm,1995-06-01*,filtered,http://google.com
+GP2,Western Pacific,8,136,150m,Shimada,1992-09-01*,filtered,http://google.com
+SB,Western Pacific,35,138.3,40m,Shimada,1992-10-01*,filtered,http://google.com
+AS9601,Arabian Sea,-19,67,50m,Shalapyonok,1995-11-01*,"filtered
+ ",

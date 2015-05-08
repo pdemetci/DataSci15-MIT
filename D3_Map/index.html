@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Longhurst Ocean Map</title>
+
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script type="text/javascript" src="/tooltip.js"></script>
+<style type="text/css">
+	.feature {
+		fill: none;
+		stroke: grey;
+		stroke-width: 1px;
+  		stroke-linejoin: round;
+	}
+	.mesh {
+		fill: none;
+  		stroke: lightgrey;
+  		stroke-width: 2px;
+  		stroke-linejoin: round;
+	}
+div.tooltip {   
+  position: absolute;           
+  text-align: center;           
+  width: 60px;                  
+  height: 28px;                 
+  padding: 2px;             
+  font: 12px sans-serif;        
+  background: lightsteelblue;   
+  border: 0px;      
+  border-radius: 8px;           
+  pointer-events: none;         
+}
+        }
+	h1 {
+		font-family: sans-serif;
+	}
+</style>
+</head>
+<body>
+	<h1>Longhurst World Oceans Map</h1>
+
+
+<script type="text/javascript">
+
+var width = 950,
+    height = 550;
+
+
+// set projection
+var projection = d3.geo.mercator();
+
+// create path variable
+var path = d3.geo.path()
+    .projection(projection);
+
+var div = d3.select("body").append("div")   
+    .attr("class", "tooltip")               
+    .style("opacity", 0);
+
+d3.json("uktopo.json", function(error, topo) { console.log(topo);
+
+  	states = topojson.feature(topo, topo.objects.Longhurst_world_v4_2010).features
+
+  	// set projection parameters
+  	projection
+      .scale(150)
+      .center([0, 0])
+
+    // create svg variable
+    var svg = d3.select("body").append("svg")
+    				.attr("width", width)
+    				.attr("height", height);
+    var tooltip = d3.select("body")
+    .append("div")
+    .style("position", "absolute")
+    .style("z-index", "10")
+    .style("visibility", "visible")
+    .text();
+
+    // points
+    aa = [-122.490402, 37.786453];
+	bb = [-122.389809, 37.72728];
+
+	console.log(projection(aa),projection(bb));
+
+	// add states from topojson
+	svg.selectAll("path")
+      .data(states).enter()
+      .append("path")
+      .attr("class", "feature")
+      .style("stroke", "steelblue")
+      .attr("d", path);
+
+
+
+    // add circles to svg
+    d3.csv("/ChisholmLab.csv", function(error, data) {
+        svg.selectAll("circle")
+           .data(data)
+           .enter()
+           .append("svg:a")
+           .attr("xlink:href", function(d){return d.url;})
+           .on("mouseover", function(d) {      
+	            div.transition()        
+	                .duration(200)      
+	                .style("opacity", .9);      
+	            div .html(d.name)  
+	                .style("left", (d3.event.pageX) + "px")     
+	                .style("top", (d3.event.pageY - 28) + "px");    
+	            })                  
+	       .on("mouseout", function(d) {       
+	            div.transition()        
+	                .duration(500)      
+	                .style("opacity", 0);   
+	        })
+           .append("circle")
+           .attr("cx", function(d) {
+                   return projection([d.lon, d.lat])[0];
+           })
+           .attr("cy", function(d) {
+                   return projection([d.lon, d.lat])[1];
+           })
+           .attr("r", 5)
+           .style("fill", "red");
+       });
+
+	d3.csv("/nitrate.csv", function(error, data) {
+        svg.selectAll("rect")
+           .data(data)
+           .enter()
+           .append("rect")
+           .attr("x", 100)
+           .attr("y", 100)
+           .attr("width", 5)
+           .attr("height", 5)
+           .style("fill", "red");
+    });
+});
+
+</script>
